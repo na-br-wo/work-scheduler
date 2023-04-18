@@ -1,6 +1,11 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+// setting up the date to display in the header
+let date = dayjs().format('dddd MMM DD YYYY')
+const currentDate = $('#currentDay')
+currentDate.text(date)
+
+// setting up save button variable
+const saveBtn = $('.saveBtn')
+
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
