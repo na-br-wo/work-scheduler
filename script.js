@@ -16,7 +16,7 @@ $(function () {
     let time = $(this).parent().attr('id')
 
     // setting items to localStorage
-    localStorage.setItem(myEvent, time)
+    localStorage.setItem(time, myEvent)
   })
 
   // defining variable for the current hour to format the colors
@@ -51,4 +51,16 @@ $(function () {
       $(this).removeClass('future')
     }
   })
+
+  // grabbing items from localStorage so they persist on reloads
+  $('#hour-8 .description').text(localStorage.getItem('hour-8'))
+  $('#hour-9 .description').text(localStorage.getItem('hour-9'))
+  $('#hour-10 .description').text(localStorage.getItem('hour-10'))
+  $('#hour-11 .description').text(localStorage.getItem('hour-11'))
+  $('#hour-12 .description').text(localStorage.getItem('hour-12'))
+  $('#hour-13 .description').text(localStorage.getItem('hour-13'))
+  $('#hour-14 .description').text(localStorage.getItem('hour-14'))
+  $('#hour-15 .description').text(localStorage.getItem('hour-15'))
+  $('#hour-16 .description').text(localStorage.getItem('hour-16'))
+  $('#hour-17 .description').text(localStorage.getItem('hour-17'))
 });
